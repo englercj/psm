@@ -15,5 +15,7 @@
         "P": "red",
         "S": "white",
         "M": "blue"
-    }
+    },
+    "promptText": "psm",
+    "prompt": "> "
 }

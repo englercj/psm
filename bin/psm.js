@@ -19,8 +19,8 @@ colors.setTheme(config.colors);
 
 //setup CLI and initialize Psm module
 var psm = new Psm(servers),
-prompt = 'psm'.promptText + '> '.prompt,
-promptLen = 5,
+prompt = config.promptText.promptText + config.prompt.prompt,
+promptLen = config.promptText.length + config.prompt.length,
 welcome = "\n" +
     "________ ".P  + "________".S + "______  ___\n".M +
     "___  __ \\".P + "__  ___/".S + "___   |/  /\n".M +
