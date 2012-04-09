@@ -2,20 +2,23 @@
 
 /**
  * Panther Server Manager CLI
-**/
+ **/
 
+//load required modules
 var Psm = require('../lib/psm').Psm,
 log = require('../lib/logger').log,
 path = require('path'),
 colors = require('colors'),
 fs = require('fs'),
 rl = require('readline').createInterface(process.stdin, process.stdout),
-config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config.json')));
+config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config.json'))),
+servers = JSON.parse(fs.readFileSync(path.join(__dirname, '../servers.json')));
 
+//set color theme for CLI
 colors.setTheme(config.colors);
 
-var servers = JSON.parse(fs.readFileSync(path.join(__dirname, '../servers.json'))),
-psm = new Psm(servers),
+//setup CLI and initialize Psm module
+var psm = new Psm(servers),
 prompt = 'psm'.promptText + '> '.prompt,
 promptLen = 5,
 welcome = "\n" +
@@ -27,30 +30,61 @@ welcome = "\n" +
 
 //built in commands
 cmds = {
+    games: {
+        usage: '<start|stop|restart|status|add>',
+        man: 'applies command to all games tracked, add will add a new game',
+        args: 2,
+        func: function() {}
+    },
+    game: {
+        usage: '<server-id> <start|stop|restart|status>',
+        man: 'main game control command',
+        args: 2,
+        func: function(line, args) {
+            game = args[1],
+            cmd = args[2];
+
+        }
+    },
     help: {
-	man: 'displays this help message',
-	func: function() {
-	    log('Available Commands:');
-	    log('-------------------');
-	    for(var cmd in cmds) {
-		if(cmds.hasOwnProperty(cmd)) {
-		    log(cmd.helpCmd + ' - '.helpDash + cmds[cmd].man.helpMan);
+        usage: '[cmd]',
+        man: 'displays this help message, or specific command help',
+        args: 0,
+        func: function(line, args) {
+            if(args.length > 0) {
+		if(cmds[args[0]]) {
+		    log(args[0].helpCmd + ' ' + cmds[args[0]].usage.helpUsage);
+		    log('-> ' + cmds[args[0]].man.helpMan);
+		} else {
+		    log('Unkown command, try "help"', 'info');
 		}
-	    }
-	}
+            } else {
+                log('Available Commands:');
+                log('-------------------');
+                for(var cmd in cmds) {
+                    if(cmds.hasOwnProperty(cmd)) {
+                        log(cmd.helpCmd + ' - '.helpDash + cmds[cmd].man.helpMan);
+                    }
+                }
+            }
+        }
     },
     echo: {
-	man: 'displays a string of text',
-	func: function(line) { 
-	    log(line.substr(line.indexOf(' ') + 1)); 
-	}
+        usage: '[text string]',
+        man: 'displays a string of text',
+        args: 0,
+        func: function(line, args) {
+            log(line.substr(line.indexOf(' ') + 1));
+        }
     },
     exit: {
-	man: 'exits the CLI',
-	func: function() {
-	    log('Good bye!');
-	    process.exit(0);
-	}
+        usage: '',
+        man: 'exits the CLI',
+        args: 0,
+        func: function(line, args) {
+            log('Good bye!');
+            process.exit(0);
+        }
     }
 };
 
@@ -65,12 +99,17 @@ rl.on('line', function(line) {
     log(prompt + line, false);
 
     if(line) {
-	var cmd = line.split(' ')[0];
-	
-	if(cmds[cmd]) 
-	    cmds[cmd].func(line);
-	else
-	    log('Unkown command, try "help"');
+        var cmd = line.split(' ')[0];
+
+        if(cmds[cmd]) {
+            args = line.split(' ').splice(1);
+            if(args.length < cmds[cmd].args)
+                log(cmd + ' requires ' + cmds[cmd].args + ' args, please see "help' + cmd + '"', 'info');
+            else
+                cmds[cmd].func(line, args);
+        }
+        else
+            log('Unkown command, try "help"', 'info');
     }
 
     rl.prompt();

@@ -11,6 +11,7 @@
         "helpCmd": "magenta",
         "helpDash": "grey",
         "helpMan": "white",
+	"helpUsage": "green",
         "P": "red",
         "S": "white",
         "M": "blue"
