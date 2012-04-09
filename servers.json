@@ -1,0 +1,21 @@
+{
+    "minecraft": {
+	"type": "minecraft",
+	"subType": "bukkit",
+	"aliases": ["mc"],
+	"name": "Minecraft",
+	"paths": {
+	    "bin": "/home/psm/servers/mc",
+	    "logs": "/home/psm/servers/mc",
+	    "backup": "/media/storage/servers/mc",
+	    "ramdisk": "/dev/shm/servers/mc"
+	},
+	"invocation": "java -Xmx2048M -XMs1024M -XX:+UseConcMarkSweepGC -XX:+CMDIncrementalPacing -XX:ParallelGCThreads=2 -XX:+AggressuveOpts -jar craftbukkit.jar nogui"
+    },
+    "minecraft-tekkit": {
+	"type": "minecraft",
+	"subType": "tekkit",
+	"aliases": ["mct"],
+	"name": "Minecraft-Tekkit"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "logging": {
+	"level": 2,
+	"dir": "logs"
+    }
+}
