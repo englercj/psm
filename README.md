@@ -15,14 +15,14 @@ Configuration
 There are a couple configuration files in the psm directory, `config.json` holds application configurations, 
 and `servers.json` is a list of servers to initialize with.
 
-## Example `config.json`
+### Example `config.json`
 {
     "logging": {
 	"level": 2,
 	"dir": "logs"
     }
 }
-### `logging`
+#### `logging`
  - `level`: the level of file logging to perform: (Default: `1`)
    - -1 is no logging
    - 0 is errors only
@@ -30,7 +30,7 @@ and `servers.json` is a list of servers to initialize with.
    - 2 is errors, info, and debug messages
  - `dir`: the directory relative to the psm directory to keep logfiles (Default: `logs`)
 
-## Example `servers.json`
+### Example `servers.json`
 {
     "server-id": {
         "type": "server-type",
@@ -46,7 +46,7 @@ and `servers.json` is a list of servers to initialize with.
         "...": "..."
     }
 }
-### `server-id`: identifies the server to commands
+#### `server-id`: identifies the server to commands
  - `type`: server class (maps to class in lib/servers/`type`/`type`.js)
  - `subType`: optional subtype (maps to class in lib/servers/`type`/`subtype`.js)
  - `aliases`: aliases for commands to use in addition to `server-id`
