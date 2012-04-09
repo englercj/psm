@@ -2,6 +2,8 @@ Overview
 ========
 Panther Server Manager is a node application designed to manage the game servers for PantherGames.
 
+Initial development will center around managing Minecraft Servers, then will branch into Source Dedicated Servers.
+
 Installation
 ------------
 To install the application clone the repository and `npm install`:
