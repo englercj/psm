@@ -24,13 +24,13 @@ and `servers.json` is a list of servers to initialize with.
 		}
 	}
 
- * `logging`
-  - `level`: the level of file logging to perform
-   - -1 = no logging, 
-   - 0 = errors only, 
-   - 1 = errors and info, 
-   - 2 = errors, info, and debug
- * `dir`: the directory relative to the psm directory to keep logfiles
+`logging`
+ - `level`: the level of file logging to perform
+  - -1 = no logging, 
+  - 0 = errors only, 
+  - 1 = errors and info, 
+  - 2 = errors, info, and debug
+ - `dir`: the directory relative to the psm directory to keep logfiles
 
 ### Example `servers.json`
 
@@ -50,13 +50,13 @@ and `servers.json` is a list of servers to initialize with.
 	    }
 	}
 
- * `server-id`: identifies the server to commands
-  - `type`: server class (maps to class in lib/servers/`type`/`type`.js)
-  - `subType`: optional subtype (maps to class in lib/servers/`type`/`subtype`.js)
-  - `aliases`: aliases for commands to use in addition to `server-id`
-  - `name`: string name to identify the server by
-  - `paths`:
-    - `bin`: absolute path to the bin or executable folder of the server
-    - `logs`: absolute path to the log folder of the server
-    - `backup`: absolute path to where backups should be made
-  - `type-specific-opts`: some types have specific options, they would go here and beyond
+`server-id`: identifies the server to commands
+ - `type`: server class (maps to class in lib/servers/`type`/`type`.js)
+ - `subType`: optional subtype (maps to class in lib/servers/`type`/`subtype`.js)
+ - `aliases`: aliases for commands to use in addition to `server-id`
+ - `name`: string name to identify the server by
+ - `paths`:
+  - `bin`: absolute path to the bin or executable folder of the server
+  - `logs`: absolute path to the log folder of the server
+  - `backup`: absolute path to where backups should be made
+ - `type-specific-opts`: some types have specific options, they would go here and beyond
