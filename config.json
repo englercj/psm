@@ -1,6 +1,18 @@
 {
     "logging": {
-	"level": 2,
-	"dir": "logs"
+        "level": 2,
+        "dir": "logs"
+    },
+    "colors": {
+        "startMessage": "green",
+        "typeHelpMessage": "yellow",
+        "promptText": "cyan",
+        "prompt": "green",
+        "helpCmd": "magenta",
+        "helpDash": "grey",
+        "helpMan": "white",
+        "P": "red",
+        "S": "white",
+        "M": "blue"
     }
 }
