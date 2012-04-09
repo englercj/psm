@@ -34,16 +34,31 @@ cmds = {
         usage: '<start|stop|restart|status|add>',
         man: 'applies command to all games tracked, add will add a new game',
         args: 2,
-        func: function() {}
+        func: function() {
+	    cmd = args[1];
+
+	    if(cmd == 'add') {
+		log('I haven\'t implemented that yet!', 'error');
+	    } else {
+		if(psm[cmd + 'All'])
+		    psm[cmd + 'All']();
+		else
+		    log('Unkown command, try "help games"', 'info');
+	    }
+	}
     },
     game: {
         usage: '<server-id> <start|stop|restart|status>',
-        man: 'main game control command',
+        man: 'main game control command, server-id is defined in servers.json',
         args: 2,
         func: function(line, args) {
-            game = args[1],
-            cmd = args[2];
+            game = args[0];
+            cmd = args[1];
 
+	    if(psm[cmd])
+		psm[cmd](game);
+	    else
+		log('Unkown command, try "help game"', 'info');
         }
     },
     help: {
