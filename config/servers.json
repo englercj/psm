@@ -10,7 +10,10 @@
 	    "backup": "/media/storage/servers/mc",
 	    "ramdisk": "/dev/shm/servers/mc"
 	},
-	"invocation": "java -Xmx2048M -XMs1024M -XX:+UseConcMarkSweepGC -XX:+CMDIncrementalPacing -XX:ParallelGCThreads=2 -XX:+AggressuveOpts -jar craftbukkit.jar nogui"
+	"jar": "craftbukkit.jar",
+	"initMem": "1024M",
+	"maxMem": "2048M",
+	"cpus": 2
     },
     "minecraft-tekkit": {
 	"type": "minecraft",

@@ -18,7 +18,8 @@
         "node": ">= v0.6.x"
     },
     "dependencies": {
-        "colors": ">=0.6.0"
+        "colors": ">=0.6.0",
+	"natural": ">=0.1.7"
     },
     "devDependencies": {},
     "private": true
