@@ -2,6 +2,11 @@
 
 /**
  * Panther Server Manager bootstrap
+ * TODO:
+ * - Check config/servers.json to ensure that each entry
+ *   has atleast the minumum settings
+ * - Check config/server.json to ensure there are no duplicate
+ *   aliases for server-ids
  **/
 
 //load required modules
