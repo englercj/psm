@@ -1,4 +1,19 @@
 {
+    "minetest": {
+	"type": "minecraft",
+	"name": "Minecraft Tests",
+	"aliases": ["mt"],
+	"paths": {
+	    "bin": "/home/psm/servers/mt",
+	    "logs": "/home/psm/servers/mt",
+	    "backup": "/media/storage/servers/mt",
+	    "ramdisk": "/dev/shm/servers/mt"
+	},
+	"jar": "minecraft_server.jar",
+	"initMem": "1024M",
+	"maxMem": "1024M",
+	"cpus": 1	    
+    },
     "minecraft": {
 	"type": "minecraft",
 	"subType": "bukkit",
