@@ -16,9 +16,9 @@
 	"cpus": 2
     },
     "minecraft-tekkit": {
-	"type": "minecraft",
-	"subType": "tekkit",
-	"aliases": ["mct"],
-	"name": "Minecraft-Tekkit"
+        "type": "minecraft",
+        "subType": "tekkit",
+        "aliases": ["mct"],
+        "name": "Minecraft-Tekkit"
     }
 }
