@@ -12,6 +12,11 @@
         "helpDash": "grey",
         "helpMan": "white",
 	"helpUsage": "green",
+	"running": "green",
+	"stopped": "red",
+	"error": "red",
+	"debug": "green",
+	"info": "cyan",
         "P": "red",
         "S": "white",
         "M": "blue"
