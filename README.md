@@ -43,7 +43,7 @@ main application configuration, `servers.json` is a list of servers to manage.
 		"promptText": "psm",
 		"prompt": "> ",
 		"api": {
-		         "ip": "127.0.0.1",
+			 "ip": "127.0.0.1",
 			 "port": 8596
 		}
 	}
