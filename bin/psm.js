@@ -10,9 +10,17 @@
  **/
 
 //load required modules
-var Cli = require('../lib/cli').Cli;
-//api = require('../lib/api').Api;
+var Cli = require('../lib/cli').Cli,
+Api = require('../lib/api').Api,
+Psm = require('../lib/psm').Psm,
+servers = require('../config/servers.json');
 
-var cli = new Cli();
+//initialize PSM module and
+//the CLI and API modules
+var psm = new Psm(servers),
+cli = new Cli(psm),
+api = new Api(psm);
+
+//start the CLI and API modules
 cli.start();
-//api.start();
+api.start();

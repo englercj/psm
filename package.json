@@ -8,7 +8,7 @@
         "url": "git://github.com/hookio/mongoHook.git"
     },
     "scripts": {
-	"start": "./bin/psm.js"
+        "start": "./bin/psm.js"
     },
     "bin": {
         "psm": "./bin/psm.js"
@@ -19,7 +19,8 @@
     },
     "dependencies": {
         "colors": ">=0.6.0",
-	"natural": ">=0.1.7"
+        "natural": ">=0.1.7",
+        "express": ">=2.0.0"
     },
     "devDependencies": {},
     "private": true
