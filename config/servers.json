@@ -16,7 +16,7 @@
     },
     "minecraft": {
 	"type": "minecraft",
-	"subType": "bukkit",
+	"subType": "craftbukkit",
 	"aliases": ["mc"],
 	"name": "Minecraft",
 	"paths": {
