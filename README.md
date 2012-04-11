@@ -1,4 +1,4 @@
-## v0.0.2 Alpha, expect bugs
+## v0.0.3 Alpha, expect bugs
 
 Overview
 ========
