@@ -58,6 +58,7 @@ main application configuration, `servers.json` is a list of servers to manage.
  - `dir`: the directory relative to the psm directory to keep logfiles
 
 `colors`
+
  - misc colors for parts of the CLI
 
 `promptText`: Text to place before the prompt
@@ -65,6 +66,7 @@ main application configuration, `servers.json` is a list of servers to manage.
 `prompt`: Actual prompt
 
 `api`
+
  - `ip`: IP for the API to bind to, use `0.0.0.0` for all
  - `port`: Port for the API to bind to
 
