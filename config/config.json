@@ -17,5 +17,9 @@
         "M": "blue"
     },
     "promptText": "psm",
-    "prompt": "> "
+    "prompt": "> ",
+    "api": {
+	"ip": "127.0.0.1",
+	"port": 8596
+    }
 }
