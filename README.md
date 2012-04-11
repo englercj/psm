@@ -1,6 +1,9 @@
+## v0.0.2 Alpha, expect bugs
+
 Overview
 ========
-Panther Server Manager is a node application designed to manage the game servers for PantherGames.
+Panther Server Manager is a node application designed to manage the game servers for PantherGames. The Manager
+provides a way to include custom server modules for managing different kinds of servers.
 
 Initial development will center around managing Minecraft Servers, then will branch into Source Dedicated Servers.
 
@@ -14,8 +17,8 @@ To install the application clone the repository and `npm install`:
 
 Configuration
 -------------
-There are a couple configuration files in the psm directory, `config.json` holds application configurations, 
-and `servers.json` is a list of servers to initialize with.
+There are a couple configuration files in the `psm/config` directory, `config.json` holds the
+main application configuration, `servers.json` is a list of servers to manage.
 
 ### Example `config.json`
 
@@ -23,6 +26,25 @@ and `servers.json` is a list of servers to initialize with.
 		"logging": {
 			"level": 2,
 			"dir": "logs"
+		},
+		"colors": {
+			"startMessage": "green",
+			"typeHelpMessage": "yellow",
+			"promptText": "cyan",
+			"prompt": "green",
+			"helpCmd": "magenta",
+			"helpDash": "grey",
+			"helpMan": "white",
+			"helpUsage": "green",
+			"P": "red",
+			"S": "white",
+			"M": "blue"
+		},
+		"promptText": "psm",
+		"prompt": "> ",
+		"api": {
+		         "ip": "127.0.0.1",
+			 "port": 8596
 		}
 	}
 
@@ -34,6 +56,17 @@ and `servers.json` is a list of servers to initialize with.
   - 1 = errors and info, 
   - 2 = errors, info, and debug
  - `dir`: the directory relative to the psm directory to keep logfiles
+
+`colors`
+ - misc colors for parts of the CLI
+
+`promptText`: Text to place before the prompt
+
+`prompt`: Actual prompt
+
+`api`
+ - `ip`: IP for the API to bind to, use `0.0.0.0` for all
+ - `port`: Port for the API to bind to
 
 ### Example `servers.json`
 
