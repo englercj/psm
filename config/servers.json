@@ -1,39 +1,77 @@
 {
-    "minetest": {
-	"type": "minecraft",
-	"name": "Minecraft Tests",
-	"aliases": ["mt"],
-	"paths": {
-	    "bin": "/home/psm/servers/mt",
-	    "logs": "/home/psm/servers/mt",
-	    "backup": "/media/storage/servers/mt",
-	    "ramdisk": "/dev/shm/servers/mt"
-	},
-	"jar": "minecraft_server.jar",
-	"initMem": "1024M",
-	"maxMem": "1024M",
-	"cpus": 1	    
-    },
     "minecraft": {
-	"type": "minecraft",
-	"subType": "craftbukkit",
-	"aliases": ["mc"],
-	"name": "Minecraft",
-	"paths": {
-	    "bin": "/home/psm/servers/mc",
-	    "logs": "/home/psm/servers/mc",
-	    "backup": "/media/storage/servers/mc",
-	    "ramdisk": "/dev/shm/servers/mc"
-	},
-	"jar": "craftbukkit.jar",
-	"initMem": "1024M",
-	"maxMem": "2048M",
-	"cpus": 2
-    },
-    "minecraft-tekkit": {
         "type": "minecraft",
-        "subType": "tekkit",
-        "aliases": ["mct"],
-        "name": "Minecraft-Tekkit"
+        "subType": "craftbukkit",
+        "aliases": ["mc"],
+        "name": "Minecraft",
+        "paths": {
+            "bin": "/home/psm/servers/mc",
+            "logs": "/home/psm/servers/mc",
+            "worldRam": "/dev/shm/servers/mc",
+            "worldDisk": "/home/psm/servers/mc/worldstorage"
+        },
+        "backups": {
+            "server": {
+                "path": "/media/storage/mc/serverbak",
+                "interval": "",
+                "enabled": true
+            },
+            "maps": {
+                "path": "/media/storage/mc/mapbak",
+                "interval": "",
+                "enabled": true
+            },
+            "logs": {
+                "path": "/media/storage/mc/logbak",
+                "interval": "",
+                "enabled": true
+            }
+        },
+	"idleTime": 15000,
+        "ramWorlds": ["world"],
+        "worlds": ["world", "world_nether", "world_the_end"],
+        "jar": "craftbukkit.jar",
+        "initMem": "1024M",
+        "maxMem": "2048M",
+        "cpus": 2
+    },
+    "minetest": {
+        "type": "minecraft",
+        "aliases": ["mt"],
+        "name": "Minecraft Test",
+        "paths": {
+            "bin": "/home/psm/servers/mt",
+            "logs": "/home/psm/servers/mt",
+            "worldRam": "/dev/shm/servers/mt",
+            "worldDisk": "/home/psm/servers/mt/worldstorage"
+        },
+        "backups": {
+            "server": {
+                "path": "/media/storage/mt/serverbak",
+                "interval": "",
+                "enabled": true
+            },
+            "maps": {
+                "path": "/media/storage/mt/mapbak",
+                "interval": "",
+                "enabled": true
+            },
+            "logs": {
+                "path": "/media/storage/mt/logbak",
+                "interval": "",
+                "enabled": true
+            }
+        },
+	"timeouts": {
+	    "startup": "15000",
+	    "shutdown": "10000"
+	},
+	"idleTime": 15000,
+        "ramWorlds": ["world"],
+        "worlds": ["world", "world_nether", "world_the_end"],
+        "jar": "minecraft_server.jar",
+        "initMem": "1024M",
+        "maxMem": "1024M",
+        "cpus": 1
     }
 }
