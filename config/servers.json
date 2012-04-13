@@ -13,17 +13,17 @@
         "backups": {
             "server": {
                 "path": "/tmp/storage/mc/serverbak",
-                "interval": "",
-                "enabled": true
+                "interval": false,
+                "enabled": false
             },
             "maps": {
                 "path": "/tmp/storage/mc/mapbak",
-                "interval": "",
+                "interval": "0 0 * * * *",
                 "enabled": true
             },
             "logs": {
                 "path": "/tmp/storage/mc/logbak",
-                "interval": "",
+                "interval": "00 10 12 * * *",
                 "enabled": true
             }
         },
