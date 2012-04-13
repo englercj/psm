@@ -12,17 +12,17 @@
         },
         "backups": {
             "server": {
-                "path": "/media/storage/mc/serverbak",
+                "path": "/tmp/storage/mc/serverbak",
                 "interval": "",
                 "enabled": true
             },
             "maps": {
-                "path": "/media/storage/mc/mapbak",
+                "path": "/tmp/storage/mc/mapbak",
                 "interval": "",
                 "enabled": true
             },
             "logs": {
-                "path": "/media/storage/mc/logbak",
+                "path": "/tmp/storage/mc/logbak",
                 "interval": "",
                 "enabled": true
             }
@@ -47,17 +47,17 @@
         },
         "backups": {
             "server": {
-                "path": "/media/storage/mt/serverbak",
+                "path": "/tmp/storage/mt/serverbak",
                 "interval": "",
                 "enabled": true
             },
             "maps": {
-                "path": "/media/storage/mt/mapbak",
+                "path": "/tmp/storage/mt/mapbak",
                 "interval": "",
                 "enabled": true
             },
             "logs": {
-                "path": "/media/storage/mt/logbak",
+                "path": "/tmp/storage/mt/logbak",
                 "interval": "",
                 "enabled": true
             }
