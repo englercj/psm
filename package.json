@@ -21,7 +21,9 @@
         "colors": ">=0.6.0",
         "natural": ">=0.1.7",
         "express": ">=2.0.0",
-	"wrench": ">=1.3.8"
+        "wrench": ">=1.3.8",
+        "request": ">=2.9.x",
+        "multimeter": ">=0.1.0"
     },
     "devDependencies": {},
     "private": true

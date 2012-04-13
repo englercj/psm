@@ -17,6 +17,7 @@
 	"error": "red",
 	"debug": "green",
 	"info": "cyan",
+	"bar": "green",
         "P": "red",
         "S": "white",
         "M": "blue"
