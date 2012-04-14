@@ -2,7 +2,7 @@
     "author": "Chad Engler <chad@pantherdev.com>",
     "name": "psm",
     "description": "Panther Server Manager manages servers and provides a common cli",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repository": {
         "type": "git",
         "url": "git://github.com/hookio/mongoHook.git"
