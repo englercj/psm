@@ -4,6 +4,7 @@
         "subType": "craftbukkit",
         "aliases": ["mc"],
         "name": "Minecraft",
+	"autoStart": true,
         "paths": {
             "bin": "/home/psm/servers/mc",
             "logs": "/home/psm/servers/mc",
@@ -23,7 +24,7 @@
             },
             "logs": {
                 "path": "/tmp/storage/mc/logbak",
-                "interval": "00 10 12 * * *",
+                "interval": "0 5 0 * * * *",
                 "enabled": true
             }
         },
@@ -40,6 +41,7 @@
 	"subType": "tekkit",
 	"aliases": ["mct"],
 	"name": "Minecraft-Tekkit",
+	"autoStart": true,
 	"paths": {
             "bin": "/home/psm/servers/mct",
             "logs": "/home/psm/servers/mct",
@@ -54,12 +56,12 @@
             },
             "maps": {
                 "path": "/tmp/storage/mct/mapbak",
-                "interval": "0 20 * * * *",
+                "interval": "0 10 * * * *",
                 "enabled": true
             },
             "logs": {
                 "path": "/tmp/storage/mct/logbak",
-                "interval": "00 30 12 * * *",
+                "interval": "0 15 0 * * *",
                 "enabled": true
             }
         },
@@ -75,6 +77,7 @@
         "type": "minecraft",
         "aliases": ["mt"],
         "name": "Minecraft Test",
+	"autoStart": false,
         "paths": {
             "bin": "/home/psm/servers/mt",
             "logs": "/home/psm/servers/mt",
@@ -85,17 +88,17 @@
             "server": {
                 "path": "/tmp/storage/mt/serverbak",
                 "interval": "",
-                "enabled": true
+                "enabled": false
             },
             "maps": {
                 "path": "/tmp/storage/mt/mapbak",
                 "interval": "",
-                "enabled": true
+                "enabled": false
             },
             "logs": {
                 "path": "/tmp/storage/mt/logbak",
                 "interval": "",
-                "enabled": true
+                "enabled": false
             }
         },
 	"timeouts": {
