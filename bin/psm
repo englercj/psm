@@ -13,14 +13,17 @@
 var Cli = require('../lib/cli').Cli,
 Api = require('../lib/api').Api,
 Psm = require('../lib/psm').Psm,
+config = require('../config/config.json'),
 servers = require('../config/servers.json');
 
 //initialize PSM module and
 //the CLI and API modules
 var psm = new Psm(servers),
-cli = new Cli(psm),
-api = new Api(psm);
+cli = new Cli(psm);
 
-//start the CLI and API modules
 cli.start();
-api.start();
+
+if(config.api.enabled) {
+    var api = new Api(psm);
+    api.start();
+}

@@ -4,7 +4,7 @@
         "subType": "craftbukkit",
         "aliases": ["mc"],
         "name": "Minecraft",
-	"autoStart": true,
+	"autoStart": false,
         "paths": {
             "bin": "/home/psm/servers/mc",
             "logs": "/home/psm/servers/mc",
@@ -41,7 +41,7 @@
 	"subType": "tekkit",
 	"aliases": ["mct"],
 	"name": "Minecraft-Tekkit",
-	"autoStart": true,
+	"autoStart": false,
 	"paths": {
             "bin": "/home/psm/servers/mct",
             "logs": "/home/psm/servers/mct",
