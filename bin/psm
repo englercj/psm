@@ -23,11 +23,13 @@ var logger = new Logger(),
 psm = new Psm(servers, logger),
 api;
 
-if(config.api.enabled) {
-    var api = new Api(psm, logger);
-    api.start();
-}
+psm.on('ready', function() {
+    if(config.api.enabled) {
+        var api = new Api(psm, logger);
+        api.start();
+    }
 
-cli = new Cli(psm, api, logger);
+    cli = new Cli(psm, api, logger);
 
-cli.start();
+    cli.start();
+});

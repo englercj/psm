@@ -2,10 +2,10 @@
     "author": "Chad Engler <chad@pantherdev.com>",
     "name": "psm",
     "description": "Panther Server Manager manages servers and provides a common CLI and API",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "repository": {
         "type": "git",
-        "url": "git://github.com/englercj/PSM.git"
+        "url": "git://github.com/pantherdev/psm.git"
     },
     "scripts": {
         "start": "./bin/psm.js"
@@ -23,7 +23,8 @@
         "wrench": ">=1.3.8",
         "request": ">=2.9.x",
         "multimeter": ">=0.1.0",
-	"cron": ">=0.2.0"
+	"cron": ">=0.2.0",
+	"npm": ">=1.1.16"
     },
     "devDependencies": {},
     "private": true
