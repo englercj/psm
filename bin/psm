@@ -21,13 +21,10 @@ servers = require('../config/servers.json');
 //the CLI and API modules
 var logger = new Logger(),
 psm = new Psm(servers, logger),
-api;
+api = new Api(psm, logger);
 
 psm.on('ready', function() {
-    if(config.api.enabled) {
-        var api = new Api(psm, logger);
-        api.start();
-    }
+    if(config.api.enabled) api.start();
 
     cli = new Cli(psm, api, logger);
 
