@@ -1,11 +1,11 @@
 {
     "author": "Chad Engler <chad@pantherdev.com>",
     "name": "psm",
-    "description": "Panther Server Manager manages servers and provides a common cli",
+    "description": "Panther Server Manager manages servers and provides a common CLI and API",
     "version": "0.1.2",
     "repository": {
         "type": "git",
-        "url": "git://github.com/hookio/mongoHook.git"
+        "url": "git://github.com/englercj/PSM.git"
     },
     "scripts": {
         "start": "./bin/psm.js"
@@ -13,7 +13,6 @@
     "bin": {
         "psm": "./bin/psm.js"
     },
-    "main" : "lib/psm.js",
     "engines": {
         "node": ">= v0.6.x"
     },
