@@ -9,6 +9,20 @@
  *   aliases for server-ids
  **/
 
+var Hook = require('hook.io').Hook,
+    path = require('path'),
+    util = require('util');
+
+var Master = function(options) {
+    Hook.call(this, options);
+};
+
+util.inherits(Master, Hook);
+
+var master = new Master(require(path.join(__dirname, '../config/config.json')).master);
+master.start();
+
+/*
 //load required modules
 var Cli = require('../lib/cli').Cli,
 Api = require('../lib/api').Api,
@@ -30,3 +44,4 @@ psm.on('ready', function() {
 
     cli.start();
 });
+*/
