@@ -1,4 +1,40 @@
 {
+    "craftbukkittest": {
+        "type": "craftbukkit",
+        "aliases": ["cb"],
+        "name": "Minecraft Craftbukkit",
+        "autoStart": true,
+        "paths": {
+            "bin": "/home/psm/servers/cb",
+            "logs": "/home/psm/servers/cb",
+            "worldRam": "/dev/shm/servers/cb",
+            "worldDisk": "/home/psm/servers/cb/worldstorage"
+        },
+        "backups": {
+            "server": {
+                "path": "/tmp/storage/cb/serverbak",
+                "interval": false,
+                "enabled": false
+            },
+            "maps": {
+                "path": "/tmp/storage/cb/mapbak",
+                "interval": "0 0 * * * *",
+                "enabled": false
+            },
+            "logs": {
+                "path": "/tmp/storage/cb/logbak",
+                "interval": "0 5 0 * * * *",
+                "enabled": false
+            }
+        },
+        "idleTime": 15000,
+        "ramWorlds": ["world"],
+        "worlds": ["world", "world_nether", "world_the_end"],
+        "jar": "craftbukkit.jar",
+        "initMem": "1024M",
+        "maxMem": "2048M",
+        "cpus": 2
+    },
     "minetest": {
         "type": "minecraft",
         "aliases": ["mt"],

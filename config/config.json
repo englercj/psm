@@ -1,0 +1,16 @@
+{
+    "cli": {
+        "logLevel": "silly",
+	"prompt": "> "
+    },
+    "api": {
+	"enabled": false,
+	"host": "127.0.0.1",
+	"port": 8596
+    },
+    "fileLog": {
+	"level": "silly",
+	"dir": "/home/psm/devpsm/logs"
+    },
+    "debug": false
+}

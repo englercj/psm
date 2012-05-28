@@ -10,6 +10,21 @@
  **/
 
 //load required modules
+var fs = require('fs');
+
+if(process.send) {
+    //if we are forked, we need to supress stdout/err
+    var nullStream = fs.createWriteStream('/dev/null'),
+    getStream = function() { return nullStream; };
+
+    process.__defineGetter__('stdout', getStream);
+    process.__defineGetter__('stderr', getStream);
+}
+
+var psm = require('../lib/psm');
+psm.cli.start();
+
+/*
 var Cli = require('../lib/cli').Cli,
 Api = require('../lib/api').Api,
 Psm = require('../lib/psm').Psm,
@@ -30,3 +45,4 @@ psm.on('ready', function() {
 
     cli.start();
 });
+*/
