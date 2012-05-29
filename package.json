@@ -24,13 +24,15 @@
         "request": "2.9.x",
         "multimeter": "0.1.x",
 	"cron": "0.2.x",
+	"npm": "1.1.x",
+
+
 	"winston": "0.5.x",
-	"optimist": "0.3.x",
 	"utile": "0.1.x",
 	"pkginfo": "0.2.x",
 	"nconf": "0.5.x",
 	"flatiron": "0.1.x",
-	"npm": "1.1.x"
+	"mongodb": "1.0.x"
     },
     "devDependencies": {},
     "private": true
