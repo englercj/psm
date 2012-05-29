@@ -12,5 +12,13 @@
 	"level": "silly",
 	"dir": "/home/psm/devpsm/logs"
     },
+    "mongodb": {
+	"host": "localhost",
+	"port": 27017,
+	"database": "psm"
+    },
+    "sockets": {
+	"dir": "/tmp/"
+    },
     "debug": false
 }
