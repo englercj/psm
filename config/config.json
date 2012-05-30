@@ -1,14 +1,13 @@
 {
     "cli": {
-        "logLevel": "silly",
 	"prompt": "> "
     },
     "api": {
 	"enabled": false,
 	"host": "127.0.0.1",
-	"port": 8596
+	"port": 9876
     },
-    "fileLog": {
+    "logging": {
 	"level": "silly",
 	"dir": "/home/psm/devpsm/logs"
     },
@@ -18,7 +17,12 @@
 	"database": "psm"
     },
     "sockets": {
-	"dir": "/tmp/"
+	"manager": "/tmp/psm-manager.sock",
+	"worker": "/tmp/psm-worker-$#.sock"
+    },
+    "pids": {
+	"manager": "/home/psm/pids/psm-manager.pid",
+	"worker": "/home/psm/pids/psm-worker-$#.sock"
     },
     "debug": false
 }

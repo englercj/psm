@@ -22,7 +22,10 @@ if(process.send) {
 }
 
 var psm = require('../lib/psm');
-psm.cli.start();
+psm.getManager(function(man) {
+    psm.manager = man;
+    psm.cli.start();
+});
 
 /*
 var Cli = require('../lib/cli').Cli,

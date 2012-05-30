@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var forever  = require('forever'),
+path = require('path'),
+Manager = require('../lib/psm/manager').Manager,
+psm = require('../lib/psm'),
+man = new Manager();
+
+man.startup(function(err) {
+    if(!err) {
+	var mon = new forever.startDaemon(__filename, {
+	    max: 1,
+	    silent: true,
+	    pidFile: psm.config.get('pids:manager')
+	});
+
+	mon.on('exit', function() {
+	    fs.unlinkSync(psm.config.get('sockets:manager'));
+	});
+
+	forever.startServer(mon);
+    }
+});
