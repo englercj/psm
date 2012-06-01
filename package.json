@@ -22,6 +22,7 @@
 	"cron": "0.2.x",
 	"npm": "1.1.x",
 
+	"eyes": "0.1.x",
 	"forever": "0.9.x",
         "express": "2.x.x",
 	"winston": "0.5.x",

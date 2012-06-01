@@ -2,13 +2,14 @@
 
 var forever  = require('forever'),
 path = require('path'),
+fs = require('fs'),
 Manager = require('../lib/psm/manager').Manager,
 psm = require('../lib/psm'),
 man = new Manager();
 
 man.startup(function(err) {
     if(!err) {
-	var mon = new forever.startDaemon(__filename, {
+    	var mon = new forever.startDaemon(__filename, {
 	    max: 1,
 	    silent: true,
 	    pidFile: psm.config.get('pids:manager')
@@ -19,5 +20,8 @@ man.startup(function(err) {
 	});
 
 	forever.startServer(mon);
+    } else {
+        psm.log.error('Failed to start PSM Daemon', err);
+	process.exit(1);
     }
 });

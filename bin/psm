@@ -22,9 +22,15 @@ if(process.send) {
 }
 
 var psm = require('../lib/psm');
-psm.getManager(function(man) {
-    psm.manager = man;
-    psm.cli.start();
+psm.getManager(function(err, man) {
+    if(err) {
+    	psm.log.error('PSM Daemon is not running, please start the PSM Daemon.');
+	psm.log.error('Usually this is done with "[sudo] service psmd start"');
+	process.exit(1);
+    } else {
+        psm.manager = man;
+	psm.cli.start();
+    }
 });
 
 /*
