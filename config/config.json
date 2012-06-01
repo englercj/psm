@@ -17,12 +17,12 @@
 	"database": "psm"
     },
     "sockets": {
-	"manager": "/tmp/psm-manager.sock",
-	"worker": "/tmp/psm-worker-$#.sock"
+	"manager": "/tmp/psmd.sock",
+	"worker": "/tmp/psmd-worker-$#.sock"
     },
     "pids": {
-	"manager": "/home/psm/pids/psm-manager.pid",
-	"worker": "/home/psm/pids/psm-worker-$#.sock"
+	"manager": "/home/psm/pids/psmd.pid",
+	"worker": "/home/psm/pids/psmd-worker-$#.pid"
     },
     "debug": false
 }
