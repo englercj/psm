@@ -17,7 +17,6 @@
 	"database": "psm"
     },
     "sockets": {
-	"manager": "/tmp/psmd.sock",
 	"worker": "/tmp/psmd-worker-$#.sock"
     },
     "pids": {

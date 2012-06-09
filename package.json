@@ -32,7 +32,8 @@
 	"flatiron": "0.1.x",
 	"mongodb": "1.0.x",
 	"enode": "0.1.x",
-	"portfinder": "0.2.x"
+	"portfinder": "0.2.x",
+	"request": "2.9.x"
     },
     "devDependencies": {},
     "private": true
