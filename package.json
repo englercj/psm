@@ -28,11 +28,12 @@
 	"nconf": "0.5.x",
 	"flatiron": "0.1.x",
 	"mongoose": "2.6.x",
+	"mongoose-auth": "0.0.x",
 	"enode": "0.1.x",
 	"portfinder": "0.2.x",
 	"request": "2.9.x",
 	"cron": "0.2.x",
-	"yaml-config": "0.1.x"
+	"js-yaml": "0.3.x"
     },
     "devDependencies": {},
     "private": true

@@ -7,21 +7,16 @@ Manager = require('../lib/psm/manager').Manager,
 psm = require('../lib/psm'),
 man = new Manager();
 
+/*
+var mon = new forever.startDaemon(__filename, {
+    max: 1,
+    silent: true,
+    pidFile: psm.config.pids.manager
+});
+
+forever.startServer(mon);
+*/
+
 man.startup(function(err) {
-    if(!err) {
-    	var mon = new forever.startDaemon(__filename, {
-	    max: 1,
-	    silent: true,
-	    pidFile: psm.config.get('pids:manager')
-	});
-
-	mon.on('exit', function() {
-	    fs.unlinkSync(psm.config.get('sockets:manager'));
-	});
-
-	forever.startServer(mon);
-    } else {
-        psm.log.error('Failed to start PSM Daemon', err);
-	process.exit(1);
-    }
+    console.log(err);
 });
