@@ -18,5 +18,5 @@ forever.startServer(mon);
 */
 
 man.startup(function(err) {
-    console.log(err);
+    if(err) psm.log.error(err, 'Error starting manager');
 });

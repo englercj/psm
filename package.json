@@ -33,7 +33,8 @@
 	"portfinder": "0.2.x",
 	"request": "2.9.x",
 	"cron": "0.2.x",
-	"js-yaml": "0.3.x"
+	"js-yaml": "0.3.x",
+	"lumber": "git+https://github.com/englercj/lumber.git"
     },
     "devDependencies": {},
     "private": true
