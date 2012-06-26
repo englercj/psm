@@ -1,0 +1,22 @@
+api:
+  enabled: yes
+  host: 127.0.0.1 #host for api to bind to, 0.0.0.0 will bind to all ipv4
+  port: 9876
+  #cookie session secret (easily generated with `apg -m 64 -n 1`)
+  cookieSecret: "FiOmpedirjirjOywykmigiptyanVaiHemCab#ShrennestAbKoicZytothlishIr"
+logging:
+  file:
+    level: silly
+    encoder: json
+    filename: /home/psm/devpsm/logs/psm.log
+    maxsize: 52428800
+    rotate: 10
+  cli:
+    level: silly
+    encoder: text
+sockets:
+  worker: "/tmp/psmd-worker-$#.sock"
+pids:
+  manager: /home/psm/pids/psmd.pid
+  worker: "/home/psm/pids/psmd-worker-$#.pid"
+debug: false
