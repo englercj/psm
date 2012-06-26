@@ -8,7 +8,8 @@
         "url": "git://github.com/pantherdev/psm.git"
     },
     "bin": {
-        "psm": "./bin/psm.js"
+        "psm": "./bin/psm",
+	"psmd": "./bin/psmd"
     },
     "engines": {
         "node": "v0.6.x"
