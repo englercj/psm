@@ -6,3 +6,4 @@
  - CLI config command import a file
  - CLI debug/verbose/silent switches
  - Make CLI use hook communication instead of REST
+ - Add parser for version out of date
