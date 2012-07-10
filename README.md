@@ -6,7 +6,7 @@ Panther Server Manager is a [Node.js](http://nodejs.org) application designed to
 module includes the PSM Daemon (psmd) that can manage multiple minecraft server instances. The PSM service also provides a RESTful API 
 for controlling all the minecraft servers.
 
-This module also provides a CLI application (psm) that wraps around the daemon for easy use from the command line.
+This module also provides a CLI application (psm) that wraps around the API for easy use from the command line.
 
 ## Features
 
