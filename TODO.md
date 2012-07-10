@@ -1,4 +1,8 @@
 ## TODO
 
  - Seperate file logs (see config)
- - Remove "remotes", it is dumb
+ - Adding servers functionaility in manager
+ - Adding server via cli prompts
+ - CLI config command import a file
+ - CLI debug/verbose/silent switches
+ - Make CLI use hook communication instead of REST
