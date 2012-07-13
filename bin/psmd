@@ -2,7 +2,7 @@
 
 var psm = require('../lib/psm'),
 fs = require('fs'),
-Manager = require('../lib/psm/manager').Manager,
+Manager = require('../lib/psm/manager/manager').Manager,
 man = new Manager({ name: 'manager' });
 
 psm.init(function(err) {
@@ -39,52 +39,3 @@ psm.init(function(err) {
 	}
     });
 });
-
-/*
-var forever  = require('forever'),
-fs = require('fs'),
-psm = require('../lib/psm'),
-Manager = require('../lib/psm/manager').Manager,
-man = new Manager();
-
-
-//var mon = new forever.startDaemon(__filename, {
-//    max: 1,
-//    silent: true,
-//    pidFile: psm.config.pids.manager
-//});
-
-//forever.startServer(mon);
-
-
-psm.init(function(err) {
-    if(err) process.exit(1);
-    else {
-        var pid;
-	try {
-  	    pid = fs.readFileSync(psm.config.pids.manager);
-	} catch(e) {}
-
-	if(pid) {
-	    psm.log.error('PSM Daemon is already running!');
-	    process.exit(2);
-	} else {
-	    man.startup(function(err) {
-                if(err) psm.log.error(err, 'Error starting manager');
-            });
-
-	    fs.writeFileSync(psm.config.pids.manager, process.pid);
-
-	    process.on('uncaughtException', function(err) {
-	        psm.log.error(err, 'Uncaught Exception in PSM Daemon');
-		process.exit(1);
-	    });
-
-	    process.on('exit', function() {
-	        try { fs.unlinkSync(psm.config.pids.manager); }
-		catch(e) {}
-	    });
-	}
-    }
-});
-*/

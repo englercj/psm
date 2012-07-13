@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-var Worker = require('../lib/psm/worker').Worker,
+var Worker = require('../lib/psm/worker/worker').Worker,
 worker = new Worker();
