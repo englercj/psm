@@ -3,7 +3,11 @@
 var psm = require('../lib/psm');
 
 psm.init(function(err) {
-    if(err) process.exit(1);
+    if(err) {
+        console.log('Unable to load PSM configuration.');
+	console.log('Please check your database configuration.');
+        process.exit(1);
+    }
     else {
         psm.cli.start();
     }
