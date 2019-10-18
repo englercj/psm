@@ -26,7 +26,7 @@
         "mongoose": "2.6.x",
         "request": "2.9.x",
         "cron": "0.2.x",
-        "js-yaml": "0.3.x",
+        "js-yaml": "3.13.x",
         "socket.io": "0.9.x",
         "hook.io": "0.8.x",
         "lumber": "git+https://github.com/englercj/lumber.git"
