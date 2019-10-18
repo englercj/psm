@@ -19,7 +19,7 @@
 
         "colors": "0.6.x",
         "eyes": "0.1.x",
-        "express": "2.x.x",
+        "express": "4.x.x",
         "utile": "0.1.x",
         "pkginfo": "0.2.x",
         "flatiron": "0.1.x",
