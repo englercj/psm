@@ -23,7 +23,7 @@
         "utile": "0.1.x",
         "pkginfo": "0.2.x",
         "flatiron": "0.1.x",
-        "mongoose": "2.6.x",
+        "mongoose": "5.7.x",
         "request": "2.9.x",
         "cron": "0.2.x",
         "js-yaml": "0.3.x",
